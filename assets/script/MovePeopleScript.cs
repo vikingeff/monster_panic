@@ -12,6 +12,7 @@ public class MovePeopleScript : MonoBehaviour {
 	public static int nb_panic = 0;
 	public UnityEngine.Texture panicText;
 	public UnityEngine.Texture normalText;
+	public static float score = 0.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -40,6 +41,10 @@ public class MovePeopleScript : MonoBehaviour {
 			renderer.material.mainTexture = normalText;
 			nb_panic--;
 		}
+		//Debug.Log(nb_panic);
+		if (nb_panic > 0)
+			score += (16 * nb_panic); 
+		Debug.Log(score);
 	}
 
 	void OnCollisionEnter() {

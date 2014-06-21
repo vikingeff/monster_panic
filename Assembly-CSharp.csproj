@@ -46,13 +46,13 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\script\AnimatedTextureScript.cs" />
-     <Compile Include="Assets\script\InstantiateScript.cs" />
-     <Compile Include="Assets\script\LookAtPeopleScript.cs" />
-     <Compile Include="Assets\script\LookAtScript.cs" />
-     <Compile Include="Assets\script\MovePeopleScript.cs" />
-     <Compile Include="Assets\script\MoveScript.cs" />
-     <Compile Include="Assets\script\SpawnScript.cs" />
+     <Compile Include="assets\script\AnimatedTextureScript.cs" />
+     <Compile Include="assets\script\InstantiateScript.cs" />
+     <Compile Include="assets\script\LookAtPeopleScript.cs" />
+     <Compile Include="assets\script\LookAtScript.cs" />
+     <Compile Include="assets\script\MovePeopleScript.cs" />
+     <Compile Include="assets\script\MoveScript.cs" />
+     <Compile Include="assets\script\SpawnScript.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
