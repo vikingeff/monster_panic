@@ -9,7 +9,9 @@ public class MovePeopleScript : MonoBehaviour {
 	public bool isPanic = false;
 	public float timerPanic = 0.0f;
 	public float delayPanic = 10.0f;
-	public static int score = 0;
+	public static int nb_panic = 0;
+	public UnityEngine.Texture panicText;
+	public UnityEngine.Texture normalText;
 
 	// Use this for initialization
 	void Start () {
@@ -35,6 +37,8 @@ public class MovePeopleScript : MonoBehaviour {
 			speed = 2.0f;
 			isPanic = false;
 			timerPanic = 0.0f;
+			renderer.material.mainTexture = normalText;
+			nb_panic--;
 		}
 	}
 
@@ -51,7 +55,8 @@ public class MovePeopleScript : MonoBehaviour {
 			Debug.Log("Panic");
 			speed = 5.0f;
 			isPanic = true;
-            renderer.material.mainTexture = Resources.Load("habitant_dos_apercu") as Texture;
+			nb_panic++;
+            renderer.material.mainTexture = panicText;
 		}
 	}
 }

@@ -13,15 +13,26 @@ public class MoveScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKey("up"))
+		AnimatedTextureScript other = (AnimatedTextureScript)GetComponent(typeof(AnimatedTextureScript));
+		other.rowNumber = 0;
+		if (Input.GetKey("up")) {
+			other.rowNumber = 0;
 			transform.Translate(new Vector3(Time.deltaTime * speed, 0, Time.deltaTime * speed), Space.World);
-		if (Input.GetKey("down"))
-			transform.Translate(new Vector3(-Time.deltaTime * speed, 0, -Time.deltaTime * speed), Space.World);
-		if (Input.GetKey("left"))
+		}
+		if (Input.GetKey ("down")) {
+			other.rowNumber = 0;
+			transform.Translate (new Vector3 (-Time.deltaTime * speed, 0, -Time.deltaTime * speed), Space.World);
+		}
+		if (Input.GetKey("left")) {
+			other.rowNumber = 1;
+			other.inverse = false;
 			transform.Translate(new Vector3(-Time.deltaTime * speed, 0, Time.deltaTime * speed), Space.World);
-		if (Input.GetKey("right"))
-			transform.Translate(new Vector3(Time.deltaTime * speed, 0, -Time.deltaTime * speed), Space.World);
-	    
+		}
+		if (Input.GetKey ("right")) {
+			other.rowNumber = 1;
+			other.inverse = true;
+			transform.Translate (new Vector3 (Time.deltaTime * speed, 0, -Time.deltaTime * speed), Space.World);
+		}
 	    Collider[] hitColliders = Physics.OverlapSphere(transform.position, radius);
         int i = 0;
         while (i < hitColliders.Length) {
