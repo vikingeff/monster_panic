@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="assets\script\AnimatedTextureScript.cs" />
      <Compile Include="assets\script\DestructBuildingScript.cs" />
+     <Compile Include="assets\script\GUITest.cs" />
      <Compile Include="assets\script\InstantiateScript.cs" />
      <Compile Include="assets\script\LookAtPeopleScript.cs" />
      <Compile Include="assets\script\LookAtScript.cs" />

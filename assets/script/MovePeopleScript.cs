@@ -42,6 +42,11 @@ public class MovePeopleScript : MonoBehaviour {
 		if (nb_panic > 0)
 			score += (16 * nb_panic); 
 		Debug.Log(score);
+		GUI.Label(new Rect(10, 10, 100, 20), "Hello World!");
+	}
+	public void addScore (float value)
+	{
+		score += value;
 	}
 
 	void OnCollisionEnter(Collision collision) {
